@@ -56,6 +56,10 @@ Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function
         Route::get('loan_types','LoanTypeController@index');
         Route::match(['get','post'],'add-edit-loan-type/{id?}','LoanTypeController@addEdit');
 
+        //Loan Rates
+        Route::get('loan_rates','LoanRateController@index');
+        Route::match(['get','post'],'add-edit-loan-rate/{id?}','LoanRateController@addEdit');
+
 
     });
 
